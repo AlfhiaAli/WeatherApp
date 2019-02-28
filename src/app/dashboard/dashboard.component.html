@@ -1,0 +1,100 @@
+<div id="throbber" style="display:none; min-height:120px;"></div>
+<div id="noty-holder"></div>
+<div id="wrapper">
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand">
+            
+            </a>
+        </div>
+        <!-- Top Menu Items -->
+        <ul class="nav navbar-right top-nav">
+            <li><a  data-placement="bottom" data-toggle="tooltip" href="#" data-original-title="Stats"><i class="fa fa-bar-chart-o"></i>
+                </a>
+            </li>            
+            <li class="dropdown">
+                <!-- <a  class="dropdown-toggle" data-toggle="dropdown">Admin User <b class="fa fa-angle-down"></b></a> -->
+                <!-- <ul class="dropdown-menu">
+                     <li><a href="#"><i class="fa fa-fw fa-user"></i> Edit Profile</a></li>
+                    <li><a href="#"><i class="fa fa-fw fa-cog"></i> Change Password</a></li> -->
+                    <!-- <li class="divider"></li>
+                    <li><a href="#"><i class="fa fa-fw fa-power-off"></i> Logout</a></li> 
+                </ul> -->
+            </li>
+        </ul>
+        <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav side-nav">
+                <li>
+                    <a ><i ></i> DASHBOARD <i></i></a>
+                  
+                </li>
+                <li>
+                    <!-- <a ><i class="fa fa-fw fa-star"></i>  USER <i></i></a> -->
+                    <!-- <a [routerLink]='"/lg"'><i class="fa fa-fw fa-star" ></i>  Log out <i></i></a> -->
+                    <ul id="submenu-2" class="collapse">
+                        <li><a href="#"><i class="fa fa-angle-double-right"></i> SUBMENU 2.1</a></li>
+                        <li><a href="#"><i class="fa fa-angle-double-right"></i> SUBMENU 2.2</a></li>
+                        <li><a href="#"><i class="fa fa-angle-double-right"></i> SUBMENU 2.3</a></li>
+                    </ul>
+                </li>
+               
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </nav> 
+ 
+ 
+ 
+ 
+ <b><h1 style="margin-top: 100px;"><b>Weather Data</b> </h1></b>
+<div class="box">
+ <b>Select Country: </b><select #Country name="Country" style="size:80;">
+    <option>Selct Country</option> 
+     <option>India</option> 
+     <option>Other</option> 
+     </select><br><br>
+    <b>Select State: </b><select #State name="State"  style="size:100;">
+        <option>Select State</option> 
+            <option>Rajasthan</option> 
+            <option>Other</option> 
+            </select><br><br>
+           <b> Select City:</b> <select #City name="City" style="size:100;">
+            <option>Select City</option> 
+                    <option>Kota</option> 
+                    <option>Bundi</option> 
+                    <option>Jaipur</option> 
+                    <option>Bikaner</option> 
+                    <option>Jaisalmer</option> 
+                    <option>Ajmer</option> 
+                    <option>Jodhpur</option> 
+                    </select><br><br>
+                    
+        
+                        <!-- <input #Condition type="string" name="Temperature" > -->
+                        <b> Select Condition:</b> <select #Condition name="Condition" style="size:100;">
+                            <option>Select Condition</option> 
+                                    <option>Sunny</option> 
+                                    <option>Cloudy</option> 
+                                    <option>Rainy</option> 
+                                    <option>Haze</option> 
+                             
+                                    </select><br><br>
+                                    <b style="margin-left:120px;"> Select CsvFile:</b>       
+            <input type='file' (change)="fileChanged($event)" style="margin-left:40px;display:inline;">
+            
+  <b style="margin-left:10px;">Date:-            </b>
+  <input #Date1 type="Date" name="DOR" class="form-control" placeholder="DD MM YYYY" style="display:inline; block-size: 90px;height:30px;width:200px;" >        
+  <br>      
+ <!-- <b>Time</b>
+  <input #Time type="number"  class="form-control" placeholder="hh/mm/ss" required> -->
+  <button  type="btn" (click)="submit(Country.value,State.value,City.value,Condition.value,Date1.value)">Submit</button></div> 
+                                  
